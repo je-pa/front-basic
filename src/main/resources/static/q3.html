@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>전체선택 / 전체해제 구현 </p>
+    <ul>
+        <li>전체선택<input type="checkbox" name="all"></li>
+        <li><input type="checkbox" name="java" class="lang">java</li>
+        <li><input type="checkbox" name="sql" class="lang">sql</li>
+        <li><input type="checkbox" name="react" class="lang">react</li>
+    </ul>
+    <script>
+        let allCheckbox = document.getElementsByName('all')[0];
+        let inputs = document.getElementsByTagName('input');
+
+        allCheckbox.addEventListener('change',function (){
+            for(let i=1 ; i<inputs.length ; i++){
+                inputs[i].checked=allCheckbox.checked
+            }
+        });
+    </script>
+</body>
+</html>

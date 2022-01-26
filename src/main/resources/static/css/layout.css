@@ -1,0 +1,28 @@
+/*nav > ul {display: flex; justify-content: space-between;}*/
+/*nav > ul > li { list-style: none;  }*/
+/*!*nav > ul li:hover + nav > ul > li > ul{ display: block; }*!*/
+/*nav > ul li:hover > ul { display: flex; }*/
+/*nav > ul li > ul { display: none; list-style: none; position: absolute;}*/
+
+/*nav > ul li > ul{display: none;}*/
+/*nav > ul li:hover > ul { display: block;}*/
+
+
+/* ================css=============================== */
+nav > ul > li { list-style: none;  }
+nav > ul li > ul { list-style: none;}
+html{ }
+ul{ padding: 16px 0; background: #00796b; margin:0;}
+a{ }
+
+@media (min-width: 1200px){
+    nav > ul {display: flex; justify-content: space-between; }
+    /*nav > ul li:hover + nav > ul > li > ul{ display: block; }*/
+    nav > ul li:hover > ul { display: flex; flex-direction: column; }
+    nav > ul li > ul { display: none; position: absolute;}
+
+}
+@media (max-width: 1200px) {
+    nav > ul li > ul{display: none;}
+    nav > ul li:hover > ul { display: block;}
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>글자수 세기</p>
+    <textarea rows="10" cols="10"></textarea>
+    <p>입력문자수:<span id="result"></span></p>
+    <script>
+        let textareaElem = document.getElementsByTagName('textarea')[0];
+        let result = document.getElementById('result');
+
+        textareaElem.addEventListener('keyup',function (){
+            result.innerHTML=textareaElem.textLength;
+        });
+    </script>
+</body>
+</html>

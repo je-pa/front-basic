@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>+버튼을 누르면 1씩 증가, - 버튼을 누르면 1씩 감소. 단, 0 이하는 감소 안됨.</p>
+    갯수<input type="text" name="quantity" id="quantity" value="1"> 
+    <button id="up">+</button> 
+    <button id="down">-</button>
+</body>
+<script>
+    let numInput = document.getElementById('quantity');
+    let upButton = document.getElementById('up');
+    let downButton = document.getElementById('down');
+
+    upButton.addEventListener('click',function (){
+        numInput.value=(parseInt(numInput.value)+1);
+    });
+    downButton.addEventListener('click',function (){
+        numInput.value=(parseInt(numInput.value)-1);
+    });
+</script>
+</html>

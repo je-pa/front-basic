@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        //객체 생성
+        const xhr = new XMLHttpRequest();
+        //비동기 방식으로 request 오픈
+        xhr.open('GET', 'data2.html');
+        xhr.setRequestHeader('Content-type','application/json');
+        xhr.setRequestHeader('Accept','json'); // 원래는 오류 js라서 안터짐?
+        //request 전송
+        xhr.send();
+
+        //Event Handler
+        xhr.onreadystatechange = function (){
+            //서버 응답 완료(DONE) && 정상작동
+            //옛날 방식이라 일일히 에러처리 해야함
+            if(xhr.readyState !== XMLHttpRequest.DONE) return;
+
+            if(xhr.status === 200){
+                console.log(xhr.responseText);
+
+                document.getElementById('content').innerHTML = xhr.responseText;
+            }else {
+                console.log(`[$(xhr.status)] : ${xhr.statusText}`);
+            }
+        };
+    </script>
+</body>
+</html>

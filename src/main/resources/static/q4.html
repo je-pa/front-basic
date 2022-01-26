@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    제공된 “안녕하세요” 문자열의 글꼴 크기를 변경하는 예제. + 버튼을 클릭하면 4px씩 증가하고 – 버튼을 클릭하면 4px씩 감소한다.
+<div>
+    <button id="plus">+</button><button id="minus">-</button> 
+    <div id="result"> 안녕하세요. </div>
+</div>
+    <script>
+        let plusButton = document.getElementById('plus');
+        let minusButton = document.getElementById('minus');
+        let result = document.getElementById('result');
+        plusButton.addEventListener('click',function (){
+            let size = result.style.getPropertyValue("font-size");
+            console.log(size);
+            result.style.fontSize = parseInt(size)+4+"px";
+        });
+        minusButton.addEventListener('click',function (){
+            console.log(result.style.fontSize);
+            result.style.fontSize = parseInt(result.style.fontSize)-4+"px";
+        });
+        minusButton.onclick//변수로
+
+        result.style.fontSize = "32px";
+    </script>
+</body>
+</html>

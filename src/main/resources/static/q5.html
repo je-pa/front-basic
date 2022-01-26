@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button name='add'>+</button>
+    <script>
+        // let btAdd = document.querySelector('button[name="add"]');
+        // // btAdd.onclick = function(e) {
+        // //
+        // // }
+        // btAdd.addEventListener('click',()=>clickEvent());
+        // function clickEvent(){
+        //     let button = document.createElement("button");
+        //     button.setAttribute('name', 'add');
+        //     button.innerHTML  = '+';
+        //     document.body.append(button);
+        //     button.addEventListener('click',()=>clickEvent());
+        // }
+
+        let btAdd = document.getElementsByName('add');
+        document.addEventListener('click', function(e) {
+            btAdd.forEach(item => {
+                if(e.target == item) {
+                    let button = document.createElement("button");
+                    button.setAttribute('name', 'add');
+                    button.innerHTML  = '+';
+
+                    document.body.append(button);
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

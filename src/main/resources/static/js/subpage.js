@@ -7,12 +7,6 @@ toggleBtn.addEventListener('click',()=>{
 
 const subButton = document.querySelectorAll('.sub_hide');
 const subMenu = document.querySelectorAll('.sub_hide + ul');
-// subButton.forEach(item=>{
-//     console.log('11')
-//     item.addEventListener('click',()=>{
-//         subMenu[1].classList.toggle('active');
-//     })
-// })
 
 for(let i=0 ; i<subButton.length ; i++){
     subButton[i].addEventListener('click',()=>{
@@ -27,6 +21,24 @@ for(let i=0 ; i<subButton.length ; i++){
         }
     })
 }
+const contactUsButton = document.querySelector('#contact_bt');
+const contactModal = document.querySelector('.contact');
+const modalBackground = document.querySelector('.modal_background');
+
+contactUsButton.addEventListener('click',()=>{
+    contactModal.classList.toggle('active');
+    modalBackground.classList.toggle('active');
+})
+const contactCloseButton = document.querySelector('.contact > a > .fa-times');
+
+contactCloseButton.addEventListener('click',()=>{
+    contactModal.classList.remove('active');
+    modalBackground.classList.remove('active');
+})
+modalBackground.addEventListener('click',()=>{
+    contactModal.classList.remove('active');
+    modalBackground.classList.remove('active');
+})
 
 //test
 //client rolling banner

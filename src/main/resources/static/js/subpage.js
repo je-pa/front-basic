@@ -5,6 +5,29 @@ toggleBtn.addEventListener('click',()=>{
     menu.classList.toggle('active');
 })
 
+const subButton = document.querySelectorAll('.sub_hide');
+const subMenu = document.querySelectorAll('.sub_hide + ul');
+// subButton.forEach(item=>{
+//     console.log('11')
+//     item.addEventListener('click',()=>{
+//         subMenu[1].classList.toggle('active');
+//     })
+// })
+
+for(let i=0 ; i<subButton.length ; i++){
+    subButton[i].addEventListener('click',()=>{
+        subMenu[i].classList.toggle('active');
+        console.log('2')
+        if(subButton[i].childNodes[0].classList.contains('fa-chevron-down')){
+            console.log('1');
+            // subButton[i].classList.remove('fa-chevron-down')
+            subButton[i].childNodes[0].classList.replace('fa-chevron-down','fa-chevron-up');
+        }else{
+            subButton[i].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
+        }
+    })
+}
+
 //test
 //client rolling banner
 window.onload = function() {

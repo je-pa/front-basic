@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1100px, user-scalable=yes">
-    <link rel="stylesheet" href="/css/layout2.css">
+    <link rel="stylesheet" href="/css/subpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-    <script defer src="/js/layout2.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="/js/subpage.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/2c6079555a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <a href="#" class="navbar__toogleBtn"><i class="fas fa-bars"></i></a>
-    <a><img src="img/logo_kor.svg"></a>
+    <a class="logo"><img src="img/logo_kor.svg"></a>
     <ul>
         <li><a>KOR</a></li>
         <li><a>ENG</a></li>
@@ -107,19 +107,72 @@
     </ul>
 </nav>
 
-<main>
-    <ul class="slides">
-        <li><img src="img/mainVisual.jpg"></li>
-    </ul>
-    <ul class="mainContents">
-        <li><img src="img/mC01.gif"></li>
-        <li><img src="img/mC02.gif"></li>
-        <li><img src="img/mC03.gif"></li>
-        <li><img src="img/mC04_on.gif"></li>
-        <li><img src="img/mC05.gif"></li>
-        <li><img src="img/mC06.gif"></li>
-    </ul>
+
+
+
+<main id="main">
+    <section class="sub_menu">
+        <ul id="sub_nav">
+            <li class="nav_home"><span><i class="fas fa-home"></i></span></li>
+            <li><a href="#none"><span>보안컨설팅</span></a></li>
+            <li><a href="#none"><span>컨설팅 수행절차</span></a> <a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="#none"><span>보안 컨설팅 서비스 종류</span></a></li>
+                    <li><a href="#none"><span>컨설팅 수행절차</span></a></li>
+                    <li><a href="#none"><span>기술 취약점 진단</span></a></li>
+                    <li><a href="#none"><span>모의해킹</span></a></li>
+                    <li><a href="#none"><span>모바일 모의해킹</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#none"><span>환경분석</span></a> <a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="#none" class="on"><span>환경분석</span></a></li>
+                    <li><a href="#none"><span>사업수행</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="sub_main">
+        <section class="content">
+            <article>
+                <h3 class="subtit">컨설팅 수행절차</h3>
+                <p>고객사의 업무에 대한 이해를 토대로 ISMS 인증 범위와 관련된 문서 검토, 담당자 인터뷰, 현장실사와 보안 요구사항을 면밀히 분석하여 정확한 보안 현황을 파악 합니다.</p>
+                <img src="/img/sc_02_01.jpg" alt="업무현황 표">
+            </article>
+            <a href="#none" id="contact_bt">CONTACT US</a>
+        </section>
+        <section class="contact">
+            <a><i class="fas fa-times"></i></a>
+            <dl>
+                <div>
+                    <dt>제품문의</dt>
+                    <dd>02-6011-1377</dd>
+                </div>
+                <div>
+                    <dt>보안관제센터</dt>
+                    <dd>02-6011-2337</dd>
+                </div>
+                <div>
+                    <dt>FAX</dt>
+                    <dd>02-463-1376</dd>
+                </div>
+                <div>
+                    <dt>Community</dt>
+                    <dd><a href="https://blog.naver.com/dtgate" target="_blank">Blog</a></dd>
+                    <dd><a href="https://www.facebook.com/CMT-Informaion-Communication-107429781388328" target="_blank">Facebook</a></dd>
+                    <dd><a href="https://twitter.com/cmtinfocomm" target="_blank">Twitter</a></dd>
+                    <dd><a href="https://www.linkedin.com/company/cmtinfo" target="_blank">Linkedin</a></dd>
+                    <dd><a href="https://www.youtube.com/channel/UC4gbO9WcU1LbCJ9QFMgL__A" target="_blank">YouTube</a></dd>
+                </div>
+            </dl>
+        </section>
+    </section>
 </main>
+
+
+
+
 <aside>
     <ul>
         <li><a><img src="img/aside/thumb-237851558_KfqWseyY_d62a88c79e8e80a28f030b7af7d4e858a138472e_155x48.jpg"></a></li>
@@ -133,23 +186,7 @@
         <li><a><img src="img/aside/thumb-2038549538_WcswbMZJ_2888bb08ad19e042d684e982b25f7afebaca682f_155x48.gif"></a></li>
         <li><a><img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif"></a></li>
     </ul>
-    <!--    ----------test--------   -->
-<!--    <div class="banner_wraper">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--        <img src="img/aside/thumb-2038549538_YEFaKN5B_de88add4a150396b1939a9daf7c0b77b3f239334_155x48.gif">-->
-<!--    </div>-->
-    <!--    ----------test--------   -->
 </aside>
-
 
 <footer>
     <section>
@@ -160,7 +197,7 @@
             <a><li>인력채용</li></a>
         </ul>
     </section>
-    <section class="">
+    <section class="address">
         <address>
             (04798) 서울시 성동구 성수이로22길 37, 803호(성수동2가, 아크밸리)
             Tel : 02-6011-1377
@@ -173,3 +210,6 @@
 </footer>
 </body>
 </html>
+
+<!--로고 - 배경이미지로 or js로-->
+<!--hover -> 클릭이벤트-->

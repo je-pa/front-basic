@@ -7,6 +7,15 @@ toggleBtn.addEventListener('click',()=>{
 
 //test
 //client rolling banner
+let move = 1;//-1: 왼쪽으로 1:오른쪽으로
+const moveLeft = document.querySelector('aside a .fa-chevron-left');
+const moveRight = document.querySelector('aside a .fa-chevron-right');
+moveLeft.addEventListener('mouseover',()=>{
+    move = -1;
+})
+moveRight.addEventListener('mouseover',()=>{
+    move = 1;
+})
 window.onload = function() {
     var bannerLeft=0;
     var first=1;
@@ -27,16 +36,22 @@ window.onload = function() {
 
         setInterval(function() {
             $img.each(function(){
-                $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
+                $(this).css("left", $(this).position().left+move); // 1px씩 왼쪽으로 이동
             });
             $first = $("#banner"+first);
             $last = $("#banner"+last);
-            if($first.position().left < -200) {    // 제일 앞에 배너 제일 뒤로 옮김
+            if(move==-1 && $first.position().left < -200) {    // 제일 앞에 배너 제일 뒤로 옮김
                 $first.css("left", $last.position().left + $last.width()+5 );
                 first++;
                 last++;
                 if(last > imgCnt) { last=1; }
                 if(first > imgCnt) { first=1; }
+            }else if(move==1 && $last.position().left > 1300) {    // 제일 앞에 배너 제일 뒤로 옮김
+                $last.css("left", $first.position().left - $first.width()-5 );
+                first--;
+                last--;
+                if(last < 1) { last=imgCnt; }
+                if(first < 1) { first=imgCnt; }
             }
         }, 50);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면
         //깔끔하게 변경가능하다

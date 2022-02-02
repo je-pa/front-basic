@@ -1,0 +1,5 @@
+body{margin:0; font-family: 'Source Sans Pro';}
+ul, dd{ padding: 0;  margin:0;}
+a{ text-decoration: none; color: white;}
+ul, li{ list-style: none; }
+address{ font-style: normal;}

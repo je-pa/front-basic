@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1100px, user-scalable=yes">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/aside.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/subpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <script defer src="/js/subpage.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="/js/common.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/2c6079555a.js" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +22,7 @@
     <a href="#" class="navbar__toogleBtn"><i class="fas fa-bars"></i></a>
     <a class="logo"><img src="img/logo_kor.svg"></a>
     <ul>
-        <li><a>KOR</a></li>
+        <li><a class="active">KOR</a></li>
         <li><a>ENG</a></li>
     </ul>
 </header>
@@ -115,19 +121,19 @@
         <ul id="sub_nav">
             <li class="nav_home"><span><i class="fas fa-home"></i></span></li>
             <li><a href="#none"><span>보안컨설팅</span></a></li>
-            <li><a href="#none"><span>컨설팅 수행절차</span></a> <a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
+            <li><a href="#none"><span>컨설팅 수행절차</span></a><a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
                 <ul>
                     <li><a href="#none"><span>보안 컨설팅 서비스 종류</span></a></li>
-                    <li><a href="#none"><span>컨설팅 수행절차</span></a></li>
+                    <li class="checked"><a href="#none"><span>컨설팅 수행절차</span></a></li>
                     <li><a href="#none"><span>기술 취약점 진단</span></a></li>
                     <li><a href="#none"><span>모의해킹</span></a></li>
                     <li><a href="#none"><span>모바일 모의해킹</span></a></li>
                 </ul>
             </li>
             <li>
-                <a href="#none"><span>환경분석</span></a> <a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
+                <a href="#none"><span>환경분석</span></a><a href="#none" class="sub_hide"><i class="fas fa-chevron-down"></i></a>
                 <ul>
-                    <li><a href="#none" class="on"><span>환경분석</span></a></li>
+                    <li class="checked"><a href="#none" class="on"><span>환경분석</span></a></li>
                     <li><a href="#none"><span>사업수행</span></a></li>
                 </ul>
             </li>
@@ -143,7 +149,8 @@
             <a href="#none" id="contact_bt">CONTACT US</a>
         </section>
         <div class="modal_background"></div>
-        <section class="contact">
+        <section class="contact open">
+            <a><i class="fas fa-chevron-right"></i></a>
             <a><i class="fas fa-times"></i></a>
             <dl>
                 <div>
@@ -204,7 +211,7 @@
         <address>
             <ul>
                 <li>(04798) 서울시 성동구 성수이로22길 37, 803호 <br>(성수동2가, 아크밸리)</li>
-                <br class="active">
+<!--                <br class="active">-->
                 <li>Tel : 02-6011-1377</li>
                 <li>Fax : 02-463-1376</li>
                 <li>E-mail: adm@cmtinfo.co.kr</li>
@@ -217,9 +224,4 @@
 </body>
 </html>
 
-<!--hover -> 클릭이벤트-->
-<!--무엇이 선택되어있는지 확인하기-->
-<!--화살표 옆 글씨도 클릭 가능하게-->
-<!--address 분리 ul li 아니면 address안에 태그 찾아보기-->
-<!--다음시간 : 메인 롤링-->
-<!--목:메인 금:서브-->
+

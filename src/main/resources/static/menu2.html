@@ -3,20 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1100px, user-scalable=yes">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/aside.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/layout2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-    <script defer src="/js/layout2.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="/js/common.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/2c6079555a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <a href="#" class="navbar__toogleBtn"><i class="fas fa-bars"></i></a>
-    <a><img src="img/logo_kor.svg"></a>
+    <a class="logo"><img src="img/logo_kor.svg"></a>
     <ul>
-        <li><a>KOR</a></li>
+        <li><a class="active">KOR</a></li>
         <li><a>ENG</a></li>
     </ul>
 </header>
@@ -121,6 +126,8 @@
     </ul>
 </main>
 <aside>
+    <a><i class="fas fa-chevron-left"></i></a>
+    <a><i class="fas fa-chevron-right"></i></a>
     <ul>
         <li><a><img src="img/aside/thumb-237851558_KfqWseyY_d62a88c79e8e80a28f030b7af7d4e858a138472e_155x48.jpg"></a></li>
         <li><a><img src="img/aside/thumb-2038549538_5mJKwyhi_5f53e490a738ddfd5e3c90a82fae0d1d04745d0d_155x48.gif"></a></li>
@@ -160,14 +167,17 @@
             <a><li>인력채용</li></a>
         </ul>
     </section>
-    <section class="">
+    <section class="address">
         <address>
-            (04798) 서울시 성동구 성수이로22길 37, 803호(성수동2가, 아크밸리)
-            Tel : 02-6011-1377
-            Fax : 02-463-1376
-            E-mail: adm@cmtinfo.co.kr
-            사업자번호 : 215-87-14581
-            COPYRIGHT © CMT정보통신 ALL RIGHTS RESERVED.
+            <ul>
+                <li>(04798) 서울시 성동구 성수이로22길 37, 803호 <br>(성수동2가, 아크밸리)</li>
+<!--                <br class="active">-->
+                <li>Tel : 02-6011-1377</li>
+                <li>Fax : 02-463-1376</li>
+                <li>E-mail: adm@cmtinfo.co.kr</li>
+                <li>사업자번호 : 215-87-14581</li>
+            </ul>
+            <p>COPYRIGHT © CMT정보통신 <br>ALL RIGHTS RESERVED.</p>
         </address>
     </section>
 </footer>

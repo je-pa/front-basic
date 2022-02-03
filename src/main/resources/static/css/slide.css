@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+main > section { display: block; height: 70vh; border: 1px solid #21409A;}
+
+main > ul{ position: fixed; right: 20px; top: 50%; width: 20px;}
+main > ul li{ text-align: center;}
+main > ul li:nth-child(1) a{color: black;}
+main > ul li a i{font-size: 1px;}
+
+main section:nth-child(1){ background: #62727b;}
+main section:nth-child(2){ background: #00796b;}
+main section:nth-child(3){ background: #4A4546;}
+main section:nth-child(4){ background: #7B7576;}
+main section:nth-child(5){ background: #C9CEFF;}
+
+
+header{ scroll-snap-align: start; }
+.container > section {
+    scroll-snap-align: start;
+}
+footer{ scroll-snap-align: start;}

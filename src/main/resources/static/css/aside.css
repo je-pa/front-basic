@@ -1,11 +1,13 @@
-aside { width: 1200px; background: white; border-top: 1px solid #62727b; height: 100px; line-height: 100px; margin: 50px auto 0 auto; position: relative; }
-aside ul { width: 1000px; margin: auto; overflow: hidden; height: 100px; position: relative; }
+aside { width: 100%; background: white; border-top: 1px solid #62727b; height: 100px; line-height: 100px; margin: 50px auto 0 auto; position: relative; }
+aside ul { width: 1100px; margin: auto; overflow: hidden; height: 100px; position: relative; }
 aside > ul li { display: block; height: 100px; line-height: 100px; position: absolute;  }
 aside > ul li > a { height: 100px; display: block; }
 aside img { vertical-align: middle;}
-aside .fa-chevron-left{ position: absolute; color: #231f20; top: 50%; transform: translate(-50%, -50%); left: 40px; font-size: 20px;}
-aside .fa-chevron-right{ position: absolute; color: #231f20; top: 50%; transform: translate(-50%, -50%); right: 40px; font-size: 20px;}
+aside .fa-chevron-left{ position: absolute; color: #231f20; top: 50%; transform: translate(-50%, -50%); left: calc(50% - 590px); font-size: 20px;}
+aside .fa-chevron-right{ position: absolute; color: #231f20; top: 50%; transform: translate(-50%, -50%); right: calc(50% - 590px); font-size: 20px;}
+@media (min-width: 1200px) {
 
+}
 @media (max-width: 1200px) {
     aside { width: 100%;}
     aside > ul { width: 88%;}

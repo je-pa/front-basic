@@ -4,7 +4,9 @@ header img{ height: 21px; vertical-align: middle; }
 header ul { display: flex; gap: 8px; margin-right: 5px;}
 header ul a{ color: black; font-weight: 600; font-size: 0.8em;}
 header ul a.active{ background-color: #21409A; color: white; padding: 2px 6px; border-radius: 15px;}
-
+@media (min-width: 1200px) {
+    header > .logo { margin-left: 25px;}
+}
 @media (max-width: 1200px) {
     header{ background: #21409A; width: 100%; } /* #224099 */
     header ul {margin-right: 10px;}

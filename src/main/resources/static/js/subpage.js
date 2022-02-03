@@ -3,36 +3,28 @@ const subMenu = document.querySelectorAll('.sub_hide + ul');
 
 for(let i=0 ; i<subButton.length ; i++){
     subButton[i].previousSibling.addEventListener('click',()=>{
-        for(let j=0;j<subButton.length;j++){
-            if(subButton[j].childNodes[0].classList.contains('fa-chevron-up') && j!=i){
-                subMenu[j].classList.remove('active');
-                subButton[j].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
-
-            }
-        }
-        subMenu[i].classList.toggle('active');
-        if(subButton[i].childNodes[0].classList.contains('fa-chevron-down')){
-            subButton[i].childNodes[0].classList.replace('fa-chevron-down','fa-chevron-up');
-        }else{
-            subButton[i].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
-        }
+        subMenuButtonClick(i);
     })
     subButton[i].addEventListener('click',()=>{
-        for(let j=0;j<subButton.length;j++){
-            if(subButton[j].childNodes[0].classList.contains('fa-chevron-up') && j!=i){
-                subMenu[j].classList.remove('active');
-                subButton[j].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
-
-            }
-        }
-        subMenu[i].classList.toggle('active');
-        if(subButton[i].childNodes[0].classList.contains('fa-chevron-down')){
-            subButton[i].childNodes[0].classList.replace('fa-chevron-down','fa-chevron-up');
-        }else{
-            subButton[i].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
-        }
+        subMenuButtonClick(i);
     })
 }
+
+function subMenuButtonClick(index){
+    for(let j=0;j<subButton.length;j++){
+        if(subButton[j].childNodes[0].classList.contains('fa-chevron-up') && j!=index){
+            subMenu[j].classList.remove('active');
+            subButton[j].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
+        }
+    }
+    subMenu[index].classList.toggle('active');
+    if(subButton[index].childNodes[0].classList.contains('fa-chevron-down')){
+        subButton[index].childNodes[0].classList.replace('fa-chevron-down','fa-chevron-up');
+    }else{
+        subButton[index].childNodes[0].classList.replace('fa-chevron-up','fa-chevron-down');
+    }
+}
+
 const contactUsButton = document.querySelector('#contact_bt');
 const contact = document.querySelector('.contact');
 const modalBackground = document.querySelector('.modal_background');

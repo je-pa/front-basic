@@ -1,5 +1,5 @@
 #main { width: 1200px; margin: auto; display: flex; flex-direction: column;}
-#main .sub_menu { z-index: 101; background: #231f20;  width: 100%;height: 60px; margin: 50px auto; }
+#main .sub_menu { z-index: 101; background: #231f20;  width: 100%;height: 60px; margin: 25px auto 0; }
 #main .sub_menu ul { display: flex; gap: 10px; }
 #main .sub_menu #sub_nav > li{  height: 60px; line-height: 60px; text-align: center;}
 #main .sub_menu #sub_nav > li:nth-child(1){ width: 70px;}
@@ -32,10 +32,19 @@
 
 @media (min-width: 1200px){
     #main #contact_bt{ display: none;}
+    #main .sub_main { padding: 2%;}
     #main .sub_main .contact{ box-shadow: -7px 7px 4px -4px #dfe6e9; }
-    #main .sub_main .contact .fa-chevron-right, #main .sub_main .contact .fa-chevron-left{ position: absolute; left:-33px; top: -1px; background-color: white; border: 1px solid #C9CEFF; width: 30px; height: 30px; font-size: 20px; text-align: center; line-height: 30px; box-shadow: -7px 7px 4px -4px #dfe6e9;}
-    #main .sub_main .contact{ width: 0; padding: 0;}
-    #main .sub_main .contact.open { z-index: 1000; position: fixed; right: -2px; top: 30%; background: white; border: 1px solid #C9CEFF;  width: 150px; padding: 20px; }
+    #main .sub_main .contact .fa-chevron-right, #main .sub_main .contact .fa-chevron-left{ position: absolute; left:-32px; top: -1px; background-color: white; border: 1px solid #C9CEFF; width: 30px; height: 30px; font-size: 20px; text-align: center; line-height: 30px; box-shadow: -7px 7px 4px -4px #dfe6e9;}
+    #main .sub_main .contact{ width: 0; padding: 0; animation-duration: 1s; animation-name: slideOut;}
+    #main .sub_main .contact.open { z-index: 1000; animation-duration: 1s; animation-name: slideIn; position: fixed; right: -2px; top: 30%; background: white; border: 1px solid #C9CEFF;  width: 150px; padding: 20px; }
+    @keyframes slideIn {
+        from { right: -192px; }
+        to { right: -2px; }
+    }
+    @keyframes slideOut {
+        from {  right: -2px; width: 150px; padding: 20px;  }
+        to { right: -192px; width: 150px; padding: 20px; }
+    }
 }
 @media (max-width: 1200px) {
     #main { width: 100%;}
@@ -44,14 +53,15 @@
     #main .sub_main .content { position: relative;}
     #main .sub_main .content h3{ font-size: 25px;}
     #main .sub_main .content p{ width: 90%; margin: 10px auto;}
-    #main .sub_main .content #contact_bt { display: inline-block; position: absolute; top: 19px; right: 25px; background: #21409A; color: white; border-radius: 7px; padding: 3px;}
+    #main .sub_main .content #contact_bt { display: inline-block; position: absolute; top: 7px; right: 5%; background: #5060C0; color: white; border-radius: 7px; padding: 3px;}
     #main .sub_main img{ width: 90%;}
     /*#main .sub_main .contact { position: fixed; top: 25%; left: 25%; width: 50%; z-index: 1000; margin: auto;  background: white; padding: 30px 15px 20px; border-radius: 8px; border: 1px solid #21409A;}*/
     #main .sub_main .modal_background{display:none; position: fixed; top:0; left: 0; bottom: 0; right: 0;background: rgba(0, 0, 0, 0.2); z-index: 999;}
     #main .sub_main .modal_background.active{display: block; }
-    #main .sub_main .contact { display: none; position: fixed; top: 50%; left: 50%;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 50%; z-index: 1000; margin: auto;  background: white; padding: 30px 15px 20px; border-radius: 8px; border: 1px solid #21409A;}
+    #main .sub_main .contact { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45%; z-index: 1000; background: white; padding: 24px 2%; border-radius: 33px; border: 1px solid #21409A;}
     #main .sub_main .contact.active{display: block; }
-    #main .sub_main .contact .fa-times { display: block; position: absolute; right: 20px; top:20px; font-size: 20px;}
+    #main .sub_main .contact dl{ width: 95%; margin: 27px auto 0;}
+    #main .sub_main .contact .fa-times { display: block; position: absolute; right: 8%; top:6%; font-size: 22px;}
     #main .sub_main .contact .fa-chevron-right,#main .sub_main .contact .fa-chevron-left { display: none;}
 }
 @media (max-width: 800px) {

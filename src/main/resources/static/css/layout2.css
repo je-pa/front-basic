@@ -1,6 +1,9 @@
 main{ display: flex; gap: normal; height: 688px; width: 1100px; margin: 45px auto;  }
 .mainContents{ display: flex; flex-wrap: wrap; gap: 5px; justify-content: space-evenly;}
-.mainContents > li { background: white; padding: 30px 0 0 21px; box-shadow: 7px 7px 4px -4px #dfe6e9;}
+.mainContents > li { background: white;  box-shadow: 7px 7px 4px -4px #dfe6e9;}
+.mainContents > li a{ display: block; width: 100%; height: 100%;}
+.mainContents > li:hover { box-shadow: 11px 11px 5px -4px #dfe6e9; position: relative; left: -1px; top: -1px; }
+.mainContents > li img{ margin: 30px 7px 0 18px; }
 
 /*--------------test-------------*/
 /* .banner_wraper { height: 60px; width: 1130px; position: relative; overflow: hidden; }*/

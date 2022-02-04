@@ -2,9 +2,10 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
+
 main > section { display: block; height: 70vh; border: 1px solid #21409A;}
 
-main > ul{ position: fixed; right: 20px; top: 50%; width: 20px;}
+main > ul{ position: fixed; right: 20px; top: 45%; width: 20px; z-index: 2000;}
 main > ul li{ text-align: center;}
 main > ul li:nth-child(1) a{color: black;}
 main > ul li a i{font-size: 1px;}
